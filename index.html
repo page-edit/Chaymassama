@@ -1157,6 +1157,7 @@
 <base target="_blank">
 <base target="_blank">
 <base target="_blank">
+<base target="_blank">
 </head>
 <body>
 
@@ -1600,9 +1601,9 @@
                 <div class="form-group full-width">
                     <label for="complexity">Niveau de montage (Vidéo uniquement)</label>
                     <select id="complexity" name="complexity" onchange="calculateEstimate()">
-                        <option value="simple">Simple (Reel Instagram basique)</option>
-                        <option value="standard" selected>Standard (Color grading, transitions propres)</option>
-                        <option value="complexe">Complexe (Storytelling avancé, multi-caméras)</option>
+                        <option value="simple">Essentiel (Reels, réseaux sociaux)</option>
+                        <option value="standard" selected>Signature (Storytelling, color grading)</option>
+                        <option value="complexe">Cinématographique (Premium, effets avancés)</option>
                     </select>
                 </div>
 
@@ -1889,22 +1890,22 @@
                 label.textContent = 'Prix du devis :';
 
                 if (type === 'photo') {
-                    complexitySelect.options[0].text = 'Simple (Montage simple)';
+                    complexitySelect.options[0].text = 'Essentiel (Reels, réseaux sociaux)';
                     eventTypeGroup.style.display = 'block';
                     const eventType = document.getElementById('eventType').value;
                     if (eventType === 'mariage') {
-                        note.innerHTML = '* Mariages: 2-3h: 800€ | 4-5h: 1200€ | 6-7h: 1600€ | 8-9h: 2000€ | 10-11h: 2400€ | 12h: 2800€';
+                        note.innerHTML = '* Photo Mariage: 2-3h: 300€ | 4-5h: 500€ | 6h: 650€ | 8h: 850€ | 10h: 1 000€ | 12h: 1 150€';
                     } else {
-                        note.innerHTML = '* Shooting normal: packs photos selon durée';
+                        note.innerHTML = '* Photo: 2h: 200€ | 4h: 380€ | 6h: 550€ | 8h: 700€ | 10h: 850€ | 12h: 1 000€';
                     }
                 } else if (type === 'video') {
-                    complexitySelect.options[0].text = 'Simple (Reel Instagram basique)';
+                    complexitySelect.options[0].text = 'Essentiel (Reels, réseaux sociaux)';
                     eventTypeGroup.style.display = 'block';
-                    note.innerHTML = '* Prix fixe selon complexité + déplacement';
+                    note.innerHTML = '* Vidéo: tarifs selon niveau de montage (Essentiel / Signature / Cinématographique) + déplacement';
                 } else if (type === 'both') {
-                    complexitySelect.options[0].text = 'Simple (Reel Instagram basique)';
+                    complexitySelect.options[0].text = 'Essentiel (Reels, réseaux sociaux)';
                     eventTypeGroup.style.display = 'block';
-                    note.innerHTML = '* Prix fixe à 500€/heure + déplacement';
+                    note.innerHTML = '* Photo + Vidéo: 500€/heure + déplacement';
                 }
 
                 calculateEstimate();
@@ -1925,25 +1926,25 @@
             eventTypeGroup.style.display = 'block';
 
             if (type === 'photo') {
-                complexitySelect.options[0].text = 'Simple (Montage simple)';
+                complexitySelect.options[0].text = 'Essentiel (Reels, réseaux sociaux)';
                 if (eventType === 'normal') {
-                    note.innerHTML = '* Shooting normal: 2h: 200€ | 4h: 400€ | 6h: 600€ | 8h: 800€ | 10h: 1000€ | 12h: 1200€';
+                    note.innerHTML = '* Photo: 2h: 200€ | 4h: 380€ | 6h: 550€ | 8h: 700€ | 10h: 850€ | 12h: 1 000€';
                 } else {
-                    note.innerHTML = '* Mariages Photo: 2-3h: 250€ | 4-5h: 400€ | 6-7h: 600€ | 8-9h: 750€ | 10-11h: 900€ | 12h: 1000€';
+                    note.innerHTML = '* Photo Mariage: 2-3h: 300€ | 4-5h: 500€ | 6h: 650€ | 8h: 850€ | 10h: 1 000€ | 12h: 1 150€';
                 }
             } else if (type === 'video') {
-                complexitySelect.options[0].text = 'Simple (Reel Instagram basique)';
+                complexitySelect.options[0].text = 'Essentiel (Reels, réseaux sociaux)';
                 if (eventType === 'normal') {
-                    note.innerHTML = '* Vidéo standard: prix fixe selon complexité + déplacement';
+                    note.innerHTML = '* Vidéo: tarifs selon niveau de montage (Essentiel / Signature / Cinématographique) + déplacement';
                 } else {
-                    note.innerHTML = '* Mariages Vidéo: tarifs sur devis selon complexité';
+                    note.innerHTML = '* Vidéo: tarifs selon niveau de montage (Essentiel / Signature / Cinématographique) + déplacement';
                 }
             } else if (type === 'both') {
-                complexitySelect.options[0].text = 'Simple (Reel Instagram basique)';
+                complexitySelect.options[0].text = 'Essentiel (Reels, réseaux sociaux)';
                 if (eventType === 'normal') {
                     note.innerHTML = '* Photo+Vidéo: 500€/heure + déplacement';
                 } else {
-                    note.innerHTML = '* Mariages Photo+Vidéo: 500€/heure (minimum 8h recommandé)';
+                    note.innerHTML = '* Photo+Vidéo: 500€/heure (minimum 8h recommandé) + déplacement';
                 }
             }
 
@@ -1959,21 +1960,21 @@ document.getElementById('eventType').addEventListener('change', function() {
 
             if (type === 'photo') {
                 if (eventType === 'normal') {
-                    note.innerHTML = '* Shooting normal: 2h: 200€ | 4h: 400€ | 6h: 600€ | 8h: 800€ | 10h: 1000€ | 12h: 1200€';
+                    note.innerHTML = '* Photo: 2h: 200€ | 4h: 380€ | 6h: 550€ | 8h: 700€ | 10h: 850€ | 12h: 1 000€';
                 } else {
-                    note.innerHTML = '* Mariages Photo: 2-3h: 250€ | 4-5h: 400€ | 6-7h: 600€ | 8-9h: 750€ | 10-11h: 900€ | 12h: 1000€';
+                    note.innerHTML = '* Photo Mariage: 2-3h: 300€ | 4-5h: 500€ | 6h: 650€ | 8h: 850€ | 10h: 1 000€ | 12h: 1 150€';
                 }
             } else if (type === 'video') {
                 if (eventType === 'normal') {
-                    note.innerHTML = '* Vidéo standard: prix fixe selon complexité + déplacement';
+                    note.innerHTML = '* Vidéo: tarifs selon niveau de montage (Essentiel / Signature / Cinématographique) + déplacement';
                 } else {
-                    note.innerHTML = '* Mariages Vidéo: tarifs sur devis selon complexité';
+                    note.innerHTML = '* Vidéo: tarifs selon niveau de montage (Essentiel / Signature / Cinématographique) + déplacement';
                 }
             } else if (type === 'both') {
                 if (eventType === 'normal') {
                     note.innerHTML = '* Photo+Vidéo: 500€/heure + déplacement';
                 } else {
-                    note.innerHTML = '* Mariages Photo+Vidéo: 500€/heure (minimum 8h recommandé)';
+                    note.innerHTML = '* Photo+Vidéo: 500€/heure (minimum 8h recommandé) + déplacement';
                 }
             }
             calculateEstimate();
