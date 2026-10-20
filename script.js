@@ -1670,8 +1670,6 @@
             <i class="fas fa-handshake" style="color: var(--deep-blue);"></i> 
             Pour toute collaboration ou partenariat :
         </p>
-        <a href="tel:+32486779196" class="phone-number" title="Cliquez pour appeler">
-            <i class="fas fa-phone-alt"></i> 0486 77 91 96
         </a>
         <p style="font-size: 0.9rem; color: var(--accent-blue); margin-top: 0.5rem;">
             <i class="fas fa-mobile-alt"></i> Cliquez pour appeler directement
